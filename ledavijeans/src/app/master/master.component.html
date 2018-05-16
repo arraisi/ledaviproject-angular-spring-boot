@@ -1,0 +1,124 @@
+<hr>
+<H3>CUSTOMER</H3>
+<hr/>
+<table border="1" widht="550px" >
+  <tr>
+    <td>ID</td>
+    <td>Name</td>
+    <td>Address</td>
+  </tr>
+  <tr *ngFor="let customer of allCustomer">
+    <td>{{customer.id}}</td>
+    <td>{{customer.name}}</td>
+    <td>{{customer.address}}</td>
+  </tr>
+</table>
+
+    <h4>INPUT NEW CUSTOMER</h4>
+    <form #formCustomer="ngForm" (submit)="saveCustomer(formCustomer.value)">
+      <table border="1">
+        <tr>
+          <td>
+            <label for="name">Nama customer</label>
+          </td>
+          <td>
+            <input type="text" name="name" id="name" ngModel>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label for="address">Address customer</label>
+          </td>
+          <td>
+            <input type="text" name="address" id="address" ngModel>
+          </td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>
+            <button type="submit">Input Data</button>
+          </td>
+        </tr>
+      </table>
+      <h4>DELETE COSTUMER</h4>
+    <form #formCustomer="ngForm" (submit)="deleteCustomer(formCustomer.value.id)">
+      <table border="1">
+        <tr>
+          <td>
+            <label for="id">ID Customer</label>
+          </td>
+          <td>
+            <input type="text" name="id" id="id" ngModel>
+          </td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>
+            <button type="submit">Delete Data</button>
+          </td>
+        </tr>
+      </table>
+
+    
+<hr>
+<H3>PRODUCT</H3>
+<hr/>
+<table border="1" width="450px">
+  <tr>
+    <td widht="50px">ID</td>
+    <td widht="200px">Name</td>
+    <td widht="200px">Price</td>
+  </tr>
+  <tr *ngFor="let product of allProduct">
+    <td>{{product.id}}</td>
+    <td>{{product.name}}</td>
+    <td>{{product.price}}</td>
+  </tr>
+</table>
+
+    <h4>INPUT NEW PRODUCT</h4>
+    <form #formProduct="ngForm" (submit)="saveProduct(formProduct.value)">
+      <table border="1">
+        <tr>
+          <td>
+            <label for="name">Name Product</label>
+          </td>
+          <td>
+            <input type="text" name="name" id="name" ngModel>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label for="price">Price</label>
+          </td>
+          <td>
+            <input type="text" name="price" id="price" ngModel>
+          </td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>
+            <button type="submit">Input Data</button>
+          </td>
+        </tr>
+      </table>
+      <h4>DELETE PRODUCT</h4>
+      <form #formProduct="ngForm" (submit)="deleteProduct(formProduct.value.id)">
+        <table border="1">
+          <tr>
+            <td>
+              <label for="id">ID Product</label>
+            </td>
+            <td>
+              <input type="text" name="id" id="id" ngModel>
+            </td>
+          </tr>
+          <tr>
+            <td></td>
+            <td>
+              <button type="submit">Delete Product</button>
+            </td>
+          </tr>
+        </table>
+
+
